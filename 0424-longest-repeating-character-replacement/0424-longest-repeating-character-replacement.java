@@ -5,12 +5,15 @@ class Solution {
         int maxfreq = 0;
         int maxlength = 0;
 
-        for(int right = 0;right < s.length();right++){
+        for(int right=0;right<s.length();right++){
             char ch = s.charAt(right);
+
             freq[ch - 'A']++;
 
-            maxfreq = Math.max(maxfreq,freq[ch - 'A']);
+            maxfreq = Math.max(maxfreq, freq[ch - 'A']);
+
             int windowsize = right - left + 1;
+
             if(windowsize - maxfreq > k){
                 freq[s.charAt(left) - 'A']--;
                 left++;
