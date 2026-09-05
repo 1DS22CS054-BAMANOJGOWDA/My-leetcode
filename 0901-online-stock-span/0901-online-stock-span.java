@@ -1,9 +1,9 @@
 class StockSpanner {
 
-    Deque<int[]> stack;
+    Deque<int[]> stack = new ArrayDeque<>();
 
     public StockSpanner() {
-        stack = new ArrayDeque<>();
+        //stack = new ArrayDeque<>();
     }
     
     public int next(int price) {
